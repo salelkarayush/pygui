@@ -1,13 +1,13 @@
 import tkinter as tk
 from tkinter import ttk
-import lib.logger_d_gui_asset as ls
-import lib.analyse_csv as acv
+# import lib.logger_d_gui_asset as ls
+# import lib.analyse_csv as acv
 import sv_ttk
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 import matplotlib.pyplot as plt
 from matplotlib.figure import Figure
 import numpy as np
-import lib.mne_gui as mg 
+# import lib.mne_gui as mg 
 import serial 
 
 filename=''
@@ -192,25 +192,25 @@ class MainApp:
     
     def actual(self):
         global filename, filepath
-        filename, filepath = ls.logger_data()
+        # filename, filepath = ls.logger_data()
         
 
     
     def imaginary(self):
         global filename, filepath
-        filename, filepath = ls.logger_data_img()
+        # filename, filepath = ls.logger_data_img()
     
     def eegplot(self):
         global filename,filepath
               
     
-        if filename == '' and filepath == '':
-            filename, filepath = acv.pass_file_path(0)
-            acv.figure_option_eeg(filename,filepath)
-        #
-        else:
-            acv.figure_option_eeg(filename,filepath)
-            plt.show()
+        # if filename == '' and filepath == '':
+        #     # filename, filepath = acv.pass_file_path(0)
+        #     # acv.figure_option_eeg(filename,filepath)
+        # #
+        # else:
+        #     acv.figure_option_eeg(filename,filepath)
+        #     plt.show()
             
     
     def eegemgplot(self):
@@ -218,24 +218,24 @@ class MainApp:
         
         
     
-        if filename == '' and filepath == '':
-            filename, filepath = acv.pass_file_path(0)
-            acv.eeg_muscle_plot(filename,filepath)
-        #
-        else:
-            acv.eeg_muscle_plot(filename,filepath)
+        # if filename == '' and filepath == '':
+        #     filename, filepath = acv.pass_file_path(0)
+        #     acv.eeg_muscle_plot(filename,filepath)
+        # #
+        # else:
+        #     acv.eeg_muscle_plot(filename,filepath)
 
     def fftplot(self):
         global filename,filepath
         
         
     
-        if filename == '' and filepath == '':
-            filename, filepath = acv.pass_file_path(0)
-            acv.figure_option_fft(filename,filepath)        
-        #
-        else:
-            acv.figure_option_fft(filename,filepath)
+        # if filename == '' and filepath == '':
+        #     filename, filepath = acv.pass_file_path(0)
+        #     acv.figure_option_fft(filename,filepath)        
+        # #
+        # else:
+        #     acv.figure_option_fft(filename,filepath)
             
             
     def psdplotT7(self):
@@ -243,12 +243,12 @@ class MainApp:
         
         
     
-        if filename == '' and filepath == '':
-           filename, filepath =  acv.pass_file_path(0)
-           acv.figure_option_psdT7(filename,filepath)
-        #
-        else:
-            acv.figure_option_psdT7(filename,filepath)
+        # if filename == '' and filepath == '':
+        #    filename, filepath =  acv.pass_file_path(0)
+        #    acv.figure_option_psdT7(filename,filepath)
+        # #
+        # else:
+        #     acv.figure_option_psdT7(filename,filepath)
             
        
     def psdplotC3(self):
@@ -256,13 +256,13 @@ class MainApp:
         
         
     
-       if filename == '' and filepath == '':
-            filename, filepath = acv.pass_file_path(0)
-            acv.figure_option_psdC3(filename,filepath)
+    #    if filename == '' and filepath == '':
+    #         filename, filepath = acv.pass_file_path(0)
+    #         acv.figure_option_psdC3(filename,filepath)
             
-        #
-       else:
-            acv.figure_option_psdC3(filename,filepath)
+    #     #
+    #    else:
+    #         acv.figure_option_psdC3(filename,filepath)
              
             
     def psdplotT8(self):
@@ -270,13 +270,13 @@ class MainApp:
         
         
     
-       if filename == '' and filepath == '':
-            filename, filepath = acv.pass_file_path(0)
-            acv.figure_option_psdT8(filename,filepath)
+    #    if filename == '' and filepath == '':
+    #         filename, filepath = acv.pass_file_path(0)
+    #         acv.figure_option_psdT8(filename,filepath)
             
-        #
-       else:
-            acv.figure_option_psdT8(filename,filepath)
+    #     #
+    #    else:
+    #         acv.figure_option_psdT8(filename,filepath)
               
               
     
@@ -285,94 +285,94 @@ class MainApp:
         
         
     
-       if filename == '' and filepath == '':
-           filename, filepath =  acv.pass_file_path(0)
-           acv.figure_option_psdC4(filename,filepath)
+    #    if filename == '' and filepath == '':
+    #        filename, filepath =  acv.pass_file_path(0)
+    #        acv.figure_option_psdC4(filename,filepath)
              
-        #
-       else:
-            acv.figure_option_psdC4(filename,filepath)
+    #     #
+    #    else:
+    #         acv.figure_option_psdC4(filename,filepath)
     
     def plot_ica(self):
         global filename,filepath
-        if filename == '' and filepath == '':
-           filename, filepath = mg.ret_filename()
-           mg.ica_plots(filename)
+        # if filename == '' and filepath == '':
+        #    filename, filepath = mg.ret_filename()
+        #    mg.ica_plots(filename)
              
-        #
-        else:
-            mg.ica_plots(filename)
+        # #
+        # else:
+        #     mg.ica_plots(filename)
             
     def plot_epochs(self):
         global filename,filepath
-        if filename == '' and filepath == '':
-           filename, filepath = mg.ret_filename()
-           mg.epoch_plots(filename)
+        # if filename == '' and filepath == '':
+        #    filename, filepath = mg.ret_filename()
+        #    mg.epoch_plots(filename)
              
-        #
-        else:
-            mg.epoch_plots(filename)
+        # #
+        # else:
+        #     mg.epoch_plots(filename)
     
     def plot_epochs2(self):
         global filename,filepath
-        if filename == '' and filepath == '':
-           filename, filepath = mg.ret_filename()
-           mg.epochp1(filename)
+        # if filename == '' and filepath == '':
+        #    filename, filepath = mg.ret_filename()
+        #    mg.epochp1(filename)
              
-        #
-        else:
-            mg.epochp1(filename)        
+        # #
+        # else:
+        #     mg.epochp1(filename)        
 
     def plot_epochs3(self):
         global filename,filepath
-        if filename == '' and filepath == '':
-           filename, filepath = mg.ret_filename()
-           mg.epochp2(filename)
+        # if filename == '' and filepath == '':
+        #    filename, filepath = mg.ret_filename()
+        #    mg.epochp2(filename)
              
-        #
-        else:
-            mg.epochp2(filename)        
+        # #
+        # else:
+        #     mg.epochp2(filename)        
 
     def plot_epochs4(self):
         global filename,filepath
-        if filename == '' and filepath == '':
-           filename, filepath = mg.ret_filename()
-           mg.epochp3(filename)
+        # if filename == '' and filepath == '':
+        #    filename, filepath = mg.ret_filename()
+        #    mg.epochp3(filename)
              
-        #
-        else:
-            mg.epochp3(filename)        
+        # #
+        # else:
+        #     mg.epochp3(filename)        
 
     def plot_epochs5(self):
         global filename,filepath
-        if filename == '' and filepath == '':
-           filename, filepath = mg.ret_filename()
-           mg.epochp4(filename)
+        # if filename == '' and filepath == '':
+        #    filename, filepath = mg.ret_filename()
+        #    mg.epochp4(filename)
              
-        #
-        else:
-            mg.epochp4(filename)        
+        # #
+        # else:
+        #     mg.epochp4(filename)        
 
 
     def plot_epochs6(self):
         global filename,filepath
-        if filename == '' and filepath == '':
-           filename, filepath = mg.ret_filename()
-           mg.epochp5(filename)
+        # if filename == '' and filepath == '':
+        #    filename, filepath = mg.ret_filename()
+        #    mg.epochp5(filename)
              
-        #
-        else:
-            mg.epochp5(filename)        
+        # #
+        # else:
+        #     mg.epochp5(filename)        
 
     def plot_epochs7(self):
         global filename,filepath
-        if filename == '' and filepath == '':
-           filename, filepath = mg.ret_filename()
-           mg.epochp6(filename)
+        # if filename == '' and filepath == '':
+        #    filename, filepath = mg.ret_filename()
+        #    mg.epochp6(filename)
              
-        #
-        else:
-            mg.epochp6(filename)        
+        # #
+        # else:
+        #     mg.epochp6(filename)        
 
     def callmodel(self):
         try:

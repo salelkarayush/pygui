@@ -13,3 +13,5 @@
 ### Step 1: Clone this project into the folder of your choice
 ### Step 2: install all the dependencies and requirements
 ### Step 3: Run the maingui.py file 
+
+#### most of the commented code was related to the original project and needs hardware dependencies
